@@ -61,9 +61,6 @@ class YamlConfigFileProvider
 
 class ServiceConfigurationValidator
 {
-    /**
-     * @param mixed $configuration
-     */
     public function validate(string $serviceClass, $configuration, SplFileInfo $configFileInfo): void
     {
         if (! is_array($configuration)) {
@@ -91,9 +88,6 @@ class ServiceConfigurationValidator
         }
     }
 
-    /**
-     * @param mixed $key
-     */
     private function isArgumentName($key): bool
     {
         if (! is_string($key)) {
